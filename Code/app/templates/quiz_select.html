@@ -1,0 +1,199 @@
+{% extends "base.html" %} {% block title %}Select Quiz Level{% endblock %} {%
+block content %}
+<style>
+  .containerr {
+    margin: auto;
+    margin-top: 10%;
+  }
+
+  h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .custom-list-group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .custom-list-group-item {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    width: 300px;
+    font-size: large;
+    font-weight: 500;
+    background-color: #fff;
+    border: 1px solid #100505;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    text-align: center;
+    background-color: #e8f7ff;
+    border-radius: 5px;
+  }
+  .custom-list-group-item.disabled {
+    pointer-events: none;
+    background-color: #e0e0e0;
+    color: #888;
+    border-color: #888;
+    cursor: not-allowed;
+    position: relative;
+  }
+
+  .custom-list-group-item.disabled::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .custom-list-group-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  .outer {
+    width: 500px;
+    height: 450px;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 10px;
+    padding: 1px;
+    background: radial-gradient(circle 230px at 0% 0%, #ffffff, #0c0d0d);
+    position: relative;
+  }
+
+  .card {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+    border: solid 1px #202222;
+    background-size: 20px 20px;
+    background: radial-gradient(circle 280px at 0% 0%, #444444, #0c0d0d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    color: #fff;
+  }
+  .ray {
+    width: 220px;
+    height: 45px;
+    border-radius: 100px;
+    position: absolute;
+    background-color: #c7c7c7;
+    opacity: 0.4;
+    box-shadow: 0 0 50px #fff;
+    filter: blur(10px);
+    transform-origin: 10%;
+    top: 0%;
+    left: 0;
+    transform: rotate(40deg);
+  }
+
+  .card .text {
+    font-weight: bolder;
+    font-size: 4rem;
+    background: linear-gradient(45deg, #000000 4%, #fff, #000);
+    background-clip: text;
+    color: transparent;
+  }
+
+  .line {
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background-color: #2c2c2c;
+  }
+  .topl {
+    top: 10%;
+    background: linear-gradient(90deg, #888888 30%, #1d1f1f 70%);
+  }
+  .bottoml {
+    bottom: 10%;
+  }
+  .leftl {
+    left: 10%;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(180deg, #747474 30%, #222424 70%);
+  }
+  .rightl {
+    right: 10%;
+    width: 1px;
+    height: 100%;
+  }
+</style>
+<div class="">
+  <div class="user-infoo" style="right: 100px; top: -30%">
+    {% if current_user.is_authenticated %}
+    <div>{{ current_user.username }}</div>
+    <div>{{ current_user.email }}</div>
+    {% if current_user.points %}
+    <div>Punkte: {{ current_user.points }}</div>
+    {% else %}
+    <div>Punkte: 0</div>
+    {% endif %} {% if current_user.level %}
+    <div>Ebene: {{ current_user.level }}</div>
+    {%else%}
+    <div>Ebene: 0</div>
+    {% endif %} {% endif %}
+  </div>
+
+  <div class="outer">
+    <div class="dot"></div>
+    <div class="card">
+      <div class="ray"></div>
+      <h2 class="mt-4" style="color: white">Wählen Sie die Quizstufe aus</h2>
+      <div class="list-group">
+        <a
+          href="{{ url_for('main.quiz', level='easy') }}"
+          class="custom-list-group-item"
+          >Basic</a
+        >
+
+        {% if current_user.unlocked_intermediate1 %}
+        <a
+          href="{{ url_for('main.quiz', level='intermediate1') }}"
+          class="custom-list-group-item"
+          >Dazwischenliegend 1</a
+        >
+        {% else %}
+        <a href="#" class="custom-list-group-item disabled"
+          >Dazwischenliegend 1</a
+        >
+        {% endif %} {% if current_user.unlocked_intermediate2 %}
+        <a
+          href="{{ url_for('main.quiz', level='intermediate2') }}"
+          class="custom-list-group-item"
+          >Dazwischenliegend 2</a
+        >
+        {% else %}
+        <a href="#" class="custom-list-group-item disabled"
+          >Dazwischenliegend 2</a
+        >
+        {% endif %} {% if current_user.unlocked_hard %}
+        <a
+          href="{{ url_for('main.quiz', level='hard') }}"
+          class="custom-list-group-item"
+          >Fortschrittlich</a
+        >
+        {% else %}
+        <a href="#" class="custom-list-group-item disabled">Fortschrittlich</a>
+        {% endif %}
+      </div>
+      <div class="line topl"></div>
+      <div class="line leftl"></div>
+      <div class="line bottoml"></div>
+      <div class="line rightl"></div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

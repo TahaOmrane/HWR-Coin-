@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="{{ url_for('static', filename='css/styles.css') }}"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist@2.6.3/plotly.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
+    <title>{% block title %}Krypto-Lernen{% endblock %}</title>
+  </head>
+  <body>
+    <nav class="navbar animated">
+      <div class="navbar-brand">
+        <a href="{{ url_for('main.home') }}">
+          <img
+            src="{{ url_for('static', filename='imgs/logo.png') }}"
+            alt="Sign-in Photo"
+            class="signin-photo"
+            style="
+              width: 50px;
+              height: 50px;
+              border-radius: 10%;
+              background-size: contain;
+              margin-top: 50%;
+            "
+        /></a>
+      </div>
+      <ul class="navbar-nav">
+        {% if current_user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('main.articles') }}">Lernen</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('main.quizzes') }}">Quiz</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('main.logout') }}">Ausloggen</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('main.login') }}">Anmeldung</a>
+        </li>
+        {% endif %}
+      </ul>
+    </nav>
+    <div class="animated">
+      {% with messages = get_flashed_messages() %} {% if messages %}
+      <div class="alert">{{ messages[0] }}</div>
+      {% endif %} {% endwith %} {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Register</title>
+  </head>
+  <body>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ceefff;
+        margin-top: 3%;
+      }
+
+      .pushable {
+        position: relative;
+        background: transparent;
+        padding: 0px;
+        border: none;
+        cursor: pointer;
+        outline-offset: 4px;
+        outline-color: deeppink;
+        transition: filter 250ms;
+        margin-bottom: 20px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+      .shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: hsl(226, 25%, 69%);
+        border-radius: 8px;
+        filter: blur(2px);
+        will-change: transform;
+        transform: translateY(2px);
+        transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+      }
+
+      .edge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 8px;
+        background: #ff6555;
+      }
+
+      .front {
+        display: block;
+        position: relative;
+        border-radius: 8px;
+        background: #ff6555;
+        padding: 16px 32px;
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-size: 1rem;
+        transform: translateY(-4px);
+        transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+      }
+
+      .pushable:hover {
+        filter: brightness(110%);
+      }
+
+      .pushable:hover .front {
+        transform: translateY(-6px);
+        transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+      }
+
+      .pushable:active .front {
+        transform: translateY(-2px);
+        transition: transform 34ms;
+      }
+
+      .pushable:hover .shadow {
+        transform: translateY(4px);
+        transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+      }
+
+      .pushable:active .shadow {
+        transform: translateY(1px);
+        transition: transform 34ms;
+      }
+
+      .pushable:focus:not(:focus-visible) {
+        outline: none;
+      }
+
+      .containerr {
+        display: flex;
+        height: 87vh;
+        width: 90vmax;
+
+        justify-content: center;
+        background-color: #f7f7f7;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 30px;
+      }
+
+      .left,
+      .right {
+        flex: 1;
+      }
+
+      .left {
+        flex: 0.5;
+        padding: 40px;
+      }
+
+      .right {
+        flex: 0.6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .signin-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .login-form {
+        max-width: 400px;
+        width: 100%;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      .login-form h2 {
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 25px;
+        font-size: large;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .input {
+        font-family: "SF Pro";
+        padding: 0.875rem;
+        font-size: 1rem;
+        border: 1.5px solid #000;
+        border-radius: 0.5rem;
+        box-shadow: 2.5px 3px 0 #000;
+        outline: none;
+        transition: ease 0.25s;
+        max-width: 320px;
+        width: 100%;
+      }
+
+      .input:focus {
+        box-shadow: 5.5px 7px 0 black;
+      }
+
+      .signup-link {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .signup-link p {
+        margin: 0;
+      }
+
+      .signup-link a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      .signup-link a:hover {
+        text-decoration: underline;
+      }
+      @media (max-width: 900px) {
+        .left {
+          display: none;
+        }
+
+        .right {
+          flex: 1;
+          max-width: 450px;
+        }
+        .containerr {
+          width: 90%;
+          padding: 0;
+          margin: 0;
+        }
+        body,
+        html {
+          padding-left: 20px;
+        }
+      }
+    </style>
+    <div class="containerr">
+      <div class="left">
+        <img
+          src="{{ url_for('static', filename='imgs/signin_photo.png') }}"
+          alt="Sign-in Photo"
+          class="signin-photo"
+        />
+      </div>
+      <div class="right">
+        <div class="login-form">
+          <h1>Registrieren</h1>
+          <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+              {{ form.username.label(class="form-label") }} {{
+              form.username(class="input") }}
+            </div>
+            <div class="form-group">
+              {{ form.email.label(class="form-label") }} {{
+              form.email(class="input") }}
+            </div>
+            <div class="form-group">
+              {{ form.password.label(class="form-label") }} {{
+              form.password(class="input") }}
+            </div>
+            <div class="form-group">
+              {{ form.confirm_password.label(class="form-label") }} {{
+              form.confirm_password(class="input") }}
+            </div>
+            <button type="submit" class="pushable" style="max-height: 20px">
+              <span class="shadow"></span>
+              <span class="edge"></span>
+              <span class="front"> Registrieren</span>
+            </button>
+          </form>
+          <div class="signup-link">
+            <a class="signup-link" href="{{ url_for('main.login') }}"
+              >Sie haben bereits ein Konto? Anmeldung</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

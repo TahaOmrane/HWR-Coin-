@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block title %}Quizergebnis{% endblock %} {% block
+content %}
+<div class="result-container">
+  <h2 class="mt-4 result-title">Quizergebnis</h2>
+  <p class="result-score">Ihr Ergebnis: {{ score }} aus {{ total }}</p>
+  <div class="result-buttons">
+    <a class="btn btn-primary" href="{{ url_for('main.quizzes') }}"
+      >Zurück zu Quiz</a
+    >
+    <a class="btn btn-secondary" href="{{ url_for('main.home') }}"
+      >Zurück nach Hause</a
+    >
+  </div>
+</div>
+{% endblock %}
