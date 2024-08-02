@@ -39,11 +39,11 @@ von Verbindungen und Abfragen.
 Benutzeroberfläche der App.
 
 
-Einführung:
+###Einführung:
 Die Crypto-Learning-Plattform wurde entwickelt, um Benutzern ein umfassendes Verständnis von Kryptowährungen zu vermitteln. 
 Sie bietet Lernmodule für Anfänger, Fortgeschrittene und Profis, die interaktive Quizze, informative Texte und Echtzeit-Datenvisualisierungen von Kryptowährungen umfassen.
 
-Ziele der Plattform:
+###Ziele der Plattform:
 
 Erreichte Ziele:
 
@@ -58,7 +58,7 @@ Nicht erreichte Ziele:
 Implementierung eines Multiplayer-Modus für Quizze.
 Integration von Echtzeit-Marktdaten mit kauf und verkauf von trades für eine realistischere Simulation.
 
-Designentscheidungen:
+###Designentscheidungen:
 Modernes und minimalistisches Design:
 Die Benutzeroberfläche ist sauber, modern und minimalistisch, um eine intuitive und angenehme Benutzererfahrung zu gewährleisten.
 
@@ -78,7 +78,7 @@ Bietet eine sichere Authentifizierung und Verwaltung von Benutzersitzungen.
 Flask-Blueprints:
 Ermöglicht die Modularität der Anwendung, wodurch das Schreiben, Warten und Bearbeiten des Codes einfacher wird.
 
-Routen der Anwendung
+###Routen der Anwendung
 Route: /register
 Methoden: GET, POST
 Zweck: Zeigt das Registrierungsformular an und verarbeitet Registrierungsanfragen.
@@ -99,32 +99,32 @@ Route: /
 Methoden: GET
 Zweck: Startseite der Anwendung, die nach erfolgreicher Anmeldung angezeigt wird.
 
-Implementierte Features:
+### Implementierte Features:
 Benutzerregistrierung und -login: Sichere Registrierung und Anmeldung mit verschlüsselten Passwörtern.
 Quizmodule: Verschiedene Schwierigkeitsstufen für Quizfragen (Anfänger, Fortgeschrittene, Profis).
 Live-Daten: Anzeige von Live-Preisdiagrammen von Kryptowährungen.
 Benutzerprofile: Verfolgen des Fortschritts, Punkte und Level.
 
-Zukünftige Features:
+### Zukünftige Features:
 Multiplayer-Quizze: Möglichkeit, gegen andere Benutzer anzutreten.
 Echtzeit-Marktdaten: Integration von Echtzeit-Daten für realistischere Simulationen.
 Realistische  trading umgebung: mehr features und informationen beim trading
 
-Skalierbarkeit
+### Skalierbarkeit
 Unsere Anwendung ist skalierbar und kann bei Bedarf problemlos erweitert werden. 
 Neue Funktionen können einfach hinzugefügt und die vorhandene Infrastruktur erweitert werden,
 um mit steigender Benutzerzahl umzugehen, ohne dabei die Leistung oder Stabilität der Anwendung zu beeinträchtigen.
 
-Fehlerbehandlung
+### Fehlerbehandlung
 Unsere Anwendung ist so konzipiert, dass sie robust und fehlertolerant ist.
 Fehler werden angemessen behandelt und dem Benutzer mit aussagekräftigen Fehlermeldungen angezeigt. 
 Im Backend können durch Flask-Erweiterungen unerwartete Fehler protokolliert und analysiert werden, um die Stabilität der Anwendung zu gewährleisten.
 
-Sicherheitsüberlegungen
+### Sicherheitsüberlegungen
 Die Sicherheit unserer Benutzerdaten hat oberste Priorität. Passwörter werden sicher verschlüsselt und gespeichert,
 um die Vertraulichkeit der Benutzerinformationen zu gewährleisten. Zusätzlich haben wir die Passwortlänge definiert, um die Sicherheit der Passwörter zu erhöhen.
 
-Personas:
+### Personas:
 Personen, die an Kryptowährungen interessiert sind und ihr Wissen und ihre Fähigkeiten verbessern möchten.
 Lerner: Menschen, die den Kryptowährungshandel lernen möchten, ohne echtes Geld zu riskieren. 
 Gamer, die nach neuen  Online-Spielen zum Thema Finanzen suchen.
@@ -151,7 +151,7 @@ Er verbringt viel Zeit mit Computerspielen und hat dabei ein starkes Interesse a
 die wirtschaftliche und finanzielle Simulationen bieten. Jonas möchte mehr über Kryptowährungen erfahren, da er sie als die Zukunft des Finanzwesens betrachtet.
 
 
-Grundidee die noch in zukunft implementiert werden könnte:
+### Grundidee die noch in zukunft implementiert werden könnte:
 1. Grundlagen des Kryptowährungshandels
 
 2. Marktanalyse
@@ -187,7 +187,7 @@ Gewinn Verlust:
  Realistische Simulation vom Handeln basierend auf Marktbewegungen
 
 
-Herausforderungen bei der Implementierung von Live-Trading:
+### Herausforderungen bei der Implementierung von Live-Trading:
 wurde schon erklärt aber hier ins detail 
 Ein Ziel, das wir ursprünglich für die Plattform hatten, war die Implementierung von Live-Trading-Funktionen. 
 Dies hätte den Benutzern ermöglicht, in einer simulierten Umgebung echte Handelsstrategien auszuprobieren. Allerdings stießen wir dabei auf mehrere Herausforderungen:
@@ -206,7 +206,7 @@ Eine Plattform, die Live-Trading unterstützt, muss extrem skalierbar sein und h
 Unsere derzeitige Infrastruktur mit SQLite und Flask war hierfür nicht ausreichend.
 
 
-Verbesserungen intern im team:
+### Verbesserungen intern im team:
 Klare Kommunikationswege
 Um Missverständnisse zu vermeiden und sicherzustellen, dass alle Teammitglieder stets auf dem gleichen Stand sind, sollten von Anfang an klare Kommunikationswege etabliert werden.
 Regelmäßige Meetings und eine offene Kommunikation über Fortschritte und Hindernisse sind essenziell.
@@ -237,9 +237,9 @@ Ein weiterer wichtiger Aspekt ist das kontinuierliche Lernen und die Bereitschaf
 Indem wir uns regelmäßig über neue Entwicklungen informieren und bereit sind, unsere Arbeitsweisen entsprechend anzupassen, können wir sicherstellen, 
 dass unser Team stets effizient und auf dem neuesten Stand arbeitet
 
-Peer Review - Taha und Momo
+### Peer Review - Taha und Momo
 
-Taha's Review
+### Taha's Review
 My observation (Wahrnehmung)
 Die Aufgabenverteilung im Projekt war zum ende hin klar und gut strukturiert. Jeder wusste genau, was zu tun ist, und konnte sich somit auf seine spezifischen Aufgaben konzentrieren. 
 Die Zusammenarbeit hat gut funktioniert, und wir konnten uns gegenseitig unterstützen, wenn jemand Hilfe benötigte wir haben uns oft geroffen.
@@ -253,7 +253,7 @@ Tip for the future (Wunsch)
 Für zukünftige Projekte wäre es wünschenswert, noch regelmäßiger Feedback-Sitzungen einzuplanen, um sicherzustellen, dass alle auf dem gleichen Stand sind und eventuelle Probleme frühzeitig erkannt und gelöst werden können.
 früher mit den einzelnen milestones fertig werden um unvorhergesehene problemle zeintnah zu beheben.
 
-Momo's Review
+### Momo's Review
 My observation (Wahrnehmung)
 
 Die Kommunikation im Team war meistens sehr gut. Wir konnten uns schnell erreichen und Fragen oder Probleme sofort klären. Allerdings gab es Momente, in denen das Zeitmanagement verbessert werden könnte, um den Projektfortschritt gleichmäßiger zu gestalten.
@@ -268,7 +268,7 @@ Für die Zukunft wäre es hilfreich, einen strikteren Zeitplan zu erstellen und 
 
 
 
-User Evaluation - Quiz Levels:
+### User Evaluation - Quiz Levels:
 
 
 Goal
@@ -284,7 +284,7 @@ Registrierung und Anmeldung
 Der Registrierungsprozess war einfach und das Erstellen eines Kontos verlief reibungslos. Nachdem ich meine neuen Anmeldedaten eingegeben hatte,
 indem ich auf die Schaltfläche "Registrieren" wurde ich zur Anmeldeseite weitergeleitet. 
 
-Quiz-Interaktion
+### Quiz-Interaktion
 
 Auf dem Startbildschirm befanden sich nun die Schaltflächen, "Quiz " und "Mein Fortschritt". Indem ich auf die Schaltfläche "Quiz starten" klickte, 
 wurde ich zur "Quiz-Seite" weitergeleitet. Dort konnte ich zwischen den verschiedenen Schwierigkeitsgraden (Anfänger, Fortgeschritten und Profi)  noch nicht wählen.
@@ -302,7 +302,7 @@ Fortschrittsanzeige
 Nach dem Abschluss jedes Quizzes wurde ich zur Seite "Mein Fortschritt" weitergeleitet, wo ich meine Punkte und meinen Level einsehen konnte. Die Fortschrittsanzeige war klar 
 und motivierend gestaltet, was dazu beitrug, den Nutzer zu ermutigen, weiter zu lernen und höhere Levels zu erreichen.
 
-Implications
+### Implications
 Die Implikationen dieser Bewertung sind positiv. Sie zeigen, dass die App aus der Perspektive eines neuen Benutzers leicht verständlich und einfach zu bedienen ist. 
 Dies kann zu einer verbesserten Benutzererfahrung führen und dazu beitragen, dass Benutzer die App gerne nutzen und möglicherweise positive Bewertungen abgeben. 
 Darüber hinaus deutet die klare visuelle Gestaltung und die gute Anleitung darauf hin, dass die App gut durchdacht und sorgfältig entwickelt wurde,
@@ -310,7 +310,7 @@ was das Vertrauen der Benutzer in die Zuverlässigkeit und Qualität der App st�
 
 dabei ist dem spieler (mein bruder) eine Verbesserungen eingefallen, nämlich :
 
-Zeitmanagement: Es wäre hilfreich, einen Timer während des Quizzes anzuzeigen, damit die Benutzer ihre Zeit besser verwalten können.
+###Zeitmanagement: Es wäre hilfreich, einen Timer während des Quizzes anzuzeigen, damit die Benutzer ihre Zeit besser verwalten können.
 Feedback-System: Nach jeder beantworteten Frage könnte sofort Feedback gegeben werden, um das Lernen effektiver zu gestalten.
 Erweiterte Statistiken: Eine detailliertere Anzeige der Fortschritte, wie z.B. welche Kategorien besonders gut oder schlecht abgeschnitten haben, könnte den Lernprozess weiter verbessern.
 Schlussfolgerung
