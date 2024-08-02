@@ -1,0 +1,327 @@
+---
+title: Documentation
+
+
+{: .label }
+Taha & Mohamed
+
+# [Summary of individual contributions]
+{: .no_toc }
+
+<details open markdown="block">
+{: .text-delta }
+<summary>Table of contents</summary>
++ ToC
+{: toc }
+</details>
+
+## Taha
+
+### Contributions
+1: Ideenfindung und Brainstorming für das Projektthema.
+2: Erstellung eines ersten Entwurfs oder einer Skizze für die App-Schnittstelle.
+3: Integration der Datenbank in die Backend-Infrastruktur der App, einschließlich der Einrichtung
+von Verbindungen und Abfragen.
+4: Integration von Such- und Filterfunktionen in die App, um Benutzern das Auffinden und
+Entdecken neuer Musiktitel zu erleichtern.
+5: Integration der Datenbank in die Backend-Infrastruktur der App, einschließlich der Einrichtung
+von Verbindungen und Abfragen.
+
+
+## Mohamed
+
+### Contributions
+1: Erfassung von detaillierten Informationen zu einzelnen Crypto infos
+2: Frontend im allgemeinen
+3: Recherche und Sammlung von relevanten Informationen oder Ressourcen für das Projekt.
+4: Entwicklung und Implementierung eines Teils der Frontend-Funktionalität der App.
+5: Design und Erstellung von Grafiken, Icons oder visuellen Elementen für die
+Benutzeroberfläche der App.
+
+
+Einführung:
+Die Crypto-Learning-Plattform wurde entwickelt, um Benutzern ein umfassendes Verständnis von Kryptowährungen zu vermitteln. 
+Sie bietet Lernmodule für Anfänger, Fortgeschrittene und Profis, die interaktive Quizze, informative Texte und Echtzeit-Datenvisualisierungen von Kryptowährungen umfassen.
+
+Ziele der Plattform:
+
+Erreichte Ziele:
+
+Bereitstellung von Lernmaterialien für verschiedene Kenntnisstufen.
+Implementierung interaktiver Quizze zur Wissenserweiterung.
+Anzeige von Live-Kryptowährungsdaten und Charts.
+Förderung eines tiefen Verständnisses der zugrunde liegenden Technologien und Konzepte von Kryptowährungen.
+Lernen durch verschiedene Level.
+
+Nicht erreichte Ziele:
+
+Implementierung eines Multiplayer-Modus für Quizze.
+Integration von Echtzeit-Marktdaten mit kauf und verkauf von trades für eine realistischere Simulation.
+
+Designentscheidungen:
+Modernes und minimalistisches Design:
+Die Benutzeroberfläche ist sauber, modern und minimalistisch, um eine intuitive und angenehme Benutzererfahrung zu gewährleisten.
+
+Live-Preisdiagramme:
+Anzeige von Live-Preisdiagrammen von Bitcoin, der bekanntesten und größten Kryptowährung, um aktuelle Markttrends in Echtzeit zu verfolgen.
+
+Technische Details
+Verwendung von SQLite:
+SQLite ist die beste Wahl für diese kleine, lokal laufende Anwendung, da es einfach zu integrieren und zu konfigurieren ist.
+
+Flask-SQLAlchemy:
+Ermöglicht die Verwendung von Modellen für das Datenbankschema und erleichtert die Abfrage von Daten.
+
+Flask-Login:
+Bietet eine sichere Authentifizierung und Verwaltung von Benutzersitzungen.
+
+Flask-Blueprints:
+Ermöglicht die Modularität der Anwendung, wodurch das Schreiben, Warten und Bearbeiten des Codes einfacher wird.
+
+Routen der Anwendung
+Route: /register
+Methoden: GET, POST
+Zweck: Zeigt das Registrierungsformular an und verarbeitet Registrierungsanfragen.
+
+Route: /login
+Methoden: GET, POST
+Zweck: Zeigt das Anmeldeformular an und verarbeitet Anmeldeanfragen.
+
+Route: /logout
+Methoden: GET, POST
+Zweck: Meldet den Benutzer ab und leitet ihn zur Anmeldeseite weiter.
+
+Route: /quiz
+Methoden: GET
+Zweck: Zeigt die Quizfragen an, die der Benutzer beantworten kann.
+
+Route: /
+Methoden: GET
+Zweck: Startseite der Anwendung, die nach erfolgreicher Anmeldung angezeigt wird.
+
+Implementierte Features:
+Benutzerregistrierung und -login: Sichere Registrierung und Anmeldung mit verschlüsselten Passwörtern.
+Quizmodule: Verschiedene Schwierigkeitsstufen für Quizfragen (Anfänger, Fortgeschrittene, Profis).
+Live-Daten: Anzeige von Live-Preisdiagrammen von Kryptowährungen.
+Benutzerprofile: Verfolgen des Fortschritts, Punkte und Level.
+
+Zukünftige Features:
+Multiplayer-Quizze: Möglichkeit, gegen andere Benutzer anzutreten.
+Echtzeit-Marktdaten: Integration von Echtzeit-Daten für realistischere Simulationen.
+Realistische  trading umgebung: mehr features und informationen beim trading
+
+Skalierbarkeit
+Unsere Anwendung ist skalierbar und kann bei Bedarf problemlos erweitert werden. 
+Neue Funktionen können einfach hinzugefügt und die vorhandene Infrastruktur erweitert werden,
+um mit steigender Benutzerzahl umzugehen, ohne dabei die Leistung oder Stabilität der Anwendung zu beeinträchtigen.
+
+Fehlerbehandlung
+Unsere Anwendung ist so konzipiert, dass sie robust und fehlertolerant ist.
+Fehler werden angemessen behandelt und dem Benutzer mit aussagekräftigen Fehlermeldungen angezeigt. 
+Im Backend können durch Flask-Erweiterungen unerwartete Fehler protokolliert und analysiert werden, um die Stabilität der Anwendung zu gewährleisten.
+
+Sicherheitsüberlegungen
+Die Sicherheit unserer Benutzerdaten hat oberste Priorität. Passwörter werden sicher verschlüsselt und gespeichert,
+um die Vertraulichkeit der Benutzerinformationen zu gewährleisten. Zusätzlich haben wir die Passwortlänge definiert, um die Sicherheit der Passwörter zu erhöhen.
+
+Personas:
+Personen, die an Kryptowährungen interessiert sind und ihr Wissen und ihre Fähigkeiten verbessern möchten.
+Lerner: Menschen, die den Kryptowährungshandel lernen möchten, ohne echtes Geld zu riskieren. 
+Gamer, die nach neuen  Online-Spielen zum Thema Finanzen suchen.
+
+bsp.
+Name: Sophie Musiala
+Alter: 22 Jahre
+Beruf: Wirtschaftswissenschafts-Studentin
+Interessen: Bildung, Wirtschaft, Finanzen
+
+Hintergrund: Sophie studiert Wirtschaftswissenschaften und interessiert sich besonders für Finanzmärkte und Investitionen. 
+Sie möchte den Handel mit Kryptowährungen verstehen und praktische Erfahrungen sammeln, bevor sie echtes Geld investiert. 
+Eine Lernplattform, die den Handel simuliert, wäre Super, um ihre theoretischen Kenntnisse in die Praxis umzusetzen.
+
+bsp.
+
+Name: Jonas Stalllone
+Alter: 16 Jahre
+Beruf: Schüler
+Interessen: Technologie, Computerspiele, Wirtschaft, 
+
+Hintergrund: Jonas ist ein gymnasialer Oberstufenschüler mit einem großen Interesse an Technologie und Wirtschaft. 
+Er verbringt viel Zeit mit Computerspielen und hat dabei ein starkes Interesse an Spielen entwickelt, 
+die wirtschaftliche und finanzielle Simulationen bieten. Jonas möchte mehr über Kryptowährungen erfahren, da er sie als die Zukunft des Finanzwesens betrachtet.
+
+
+Grundidee die noch in zukunft implementiert werden könnte:
+1. Grundlagen des Kryptowährungshandels
+
+2. Marktanalyse
+
+3. Risikomanagement
+
+4. Handelsstrategien
+
+5. Psychologie des Handels
+
+6. Wettbewerbsanalyse
+
+7. Praktische Anwendung
+
+8. Finanzielle Bildung
+
+9. Quartalsfunktion
+
+Multiplayer Mode: 
+Unterstützt 2 bis 4 Spieler, die gleichzeitig handeln.
+
+Echtzeit Daten: 
+Verwendung von Echtzeit-Marktdaten für ein realistisches Handelserlebnis.
+
+Spiel Mechanik: 
+Spieler beginnen mit einem festen virtuellen Kapital und handeln aus 3 ausgewählten
+ Kryptowährungen, um deren Wert zu maximieren über mehrere Runden.
+
+Bestenliste: 
+Anzeige der besten Spieler basierend auf ihren Gewinn zum Ende.
+
+Gewinn Verlust:
+ Realistische Simulation vom Handeln basierend auf Marktbewegungen
+
+
+Herausforderungen bei der Implementierung von Live-Trading:
+wurde schon erklärt aber hier ins detail 
+Ein Ziel, das wir ursprünglich für die Plattform hatten, war die Implementierung von Live-Trading-Funktionen. 
+Dies hätte den Benutzern ermöglicht, in einer simulierten Umgebung echte Handelsstrategien auszuprobieren. Allerdings stießen wir dabei auf mehrere Herausforderungen:
+
+Bots und Marktsimulation:
+Um eine realistische Handelsumgebung zu schaffen, benötigt man entweder eine große Anzahl von Nutzern oder fortschrittliche Handelsbots, 
+die Marktbewegungen simulieren. Der Kauf und die Konfiguration solcher Bots wäre jedoch kostspielig und technisch anspruchsvoll gewesen die api s die kostenlos waren waren sehr aufwendig und kompliziert,
+videos im internet zeigten dass sie sehr anfällig für fehler sind.
+
+Komplexität der Integration:
+Die Integration von Live-Trading erfordert eine Echtzeit-Schnittstelle zu Handelsplattformen und die Fähigkeit, Transaktionen in Echtzeit abzuwickeln.
+Dies stellt hohe Anforderungen an die technische Infrastruktur und die Sicherheit der Plattform. Jedoch haben wir es geschafft für bitcoin aber nicht anderen.
+
+Skalierbarkeit und Leistung:
+Eine Plattform, die Live-Trading unterstützt, muss extrem skalierbar sein und hohe Leistung bieten, um den Anforderungen vieler gleichzeitiger Benutzer gerecht zu werden.
+Unsere derzeitige Infrastruktur mit SQLite und Flask war hierfür nicht ausreichend.
+
+
+Verbesserungen intern im team:
+Klare Kommunikationswege
+Um Missverständnisse zu vermeiden und sicherzustellen, dass alle Teammitglieder stets auf dem gleichen Stand sind, sollten von Anfang an klare Kommunikationswege etabliert werden.
+Regelmäßige Meetings und eine offene Kommunikation über Fortschritte und Hindernisse sind essenziell.
+
+Gründlichere Dokumentation
+Beim nächsten Mal würden wir eine gründlichere Dokumentation in kleineren Schritten durchführen. Dies würde sicherstellen, dass der aktuelle Stand des Projekts
+immer klar ersichtlich ist und jeder im Team leicht nachvollziehen kann, welche Änderungen vorgenommen wurden und warum.
+
+Verbesserter Zeitplan
+Ein strikterer und besser geplanter Zeitplan ist wichtig. Indem wir uns früher einen detaillierten Zeitplan erstellen und diesen konsequent einhalten, 
+könnten wir am Ende des Projekts noch genügend Zeit für weitere Verbesserungen und die Behebung eventueller Probleme haben. Dies würde auch den Stress und die Last-Minute-Arbeit minimieren.
+
+Rollen und Verantwortlichkeiten
+Klare Zuweisung von Rollen und Verantwortlichkeiten innerhalb des Teams würde die Effizienz steigern. Jedes Teammitglied sollte genau wissen, 
+welche Aufgaben es hat und welche Erwartungen an seine Leistung gestellt werden. Dies fördert nicht nur die Produktivität, sondern auch die Verantwortlichkeit innerhalb des Teams das haben wir zum ende hin aber genauso gemacht und es hat uns viele mühen erspart.
+
+Verwendung von Projektmanagement-Tools
+Die Nutzung von Projektmanagement-Tools wie Trello, Asana oder Jira könnte die Organisation und Nachverfolgung von Aufgaben erleichtern.
+Solche Tools bieten eine visuelle Übersicht über den Projektfortschritt und helfen, Aufgaben zu priorisieren und Deadlines einzuhalten.
+whats app hat kaum features so etwas darzustelllen 
+
+Früheres Testen und Feedback
+Das frühzeitige Testen von Funktionen und das Einholen von Feedback während des Entwicklungsprozesses würde uns helfen, Probleme schneller zu identifizieren und zu beheben. 
+Dies könnte die Qualität des Endprodukts erheblich verbessern und sicherstellen, dass es den Anforderungen der Benutzer entspricht.
+
+Kontinuierliches Lernen und Anpassung
+Ein weiterer wichtiger Aspekt ist das kontinuierliche Lernen und die Bereitschaft, sich anzupassen. Technologie und Best Practices entwickeln sich ständig weiter. 
+Indem wir uns regelmäßig über neue Entwicklungen informieren und bereit sind, unsere Arbeitsweisen entsprechend anzupassen, können wir sicherstellen, 
+dass unser Team stets effizient und auf dem neuesten Stand arbeitet
+
+Peer Review - Taha und Momo
+
+Taha's Review
+My observation (Wahrnehmung)
+Die Aufgabenverteilung im Projekt war zum ende hin klar und gut strukturiert. Jeder wusste genau, was zu tun ist, und konnte sich somit auf seine spezifischen Aufgaben konzentrieren. 
+Die Zusammenarbeit hat gut funktioniert, und wir konnten uns gegenseitig unterstützen, wenn jemand Hilfe benötigte wir haben uns oft geroffen.
+
+Effect on me (Wirkung)
+
+Durch die klare Aufgabenverteilung konnte ich mich fokussiert und effizient auf meinen Teil des Projekts konzentrieren. Dies hat dazu geführt, dass ich meine Aufgaben rechtzeitig und in hoher Qualität erledigen konnte, ohne mich zu sehr gestresst zu fühlen.
+
+Tip for the future (Wunsch)
+
+Für zukünftige Projekte wäre es wünschenswert, noch regelmäßiger Feedback-Sitzungen einzuplanen, um sicherzustellen, dass alle auf dem gleichen Stand sind und eventuelle Probleme frühzeitig erkannt und gelöst werden können.
+früher mit den einzelnen milestones fertig werden um unvorhergesehene problemle zeintnah zu beheben.
+
+Momo's Review
+My observation (Wahrnehmung)
+
+Die Kommunikation im Team war meistens sehr gut. Wir konnten uns schnell erreichen und Fragen oder Probleme sofort klären. Allerdings gab es Momente, in denen das Zeitmanagement verbessert werden könnte, um den Projektfortschritt gleichmäßiger zu gestalten.
+
+Effect on me (Wirkung)
+
+Durch die gute Kommunikation konnte ich mich sicher fühlen, dass wir als Team effizient arbeiten. Es hat mir geholfen, Probleme schnell zu lösen und sicherzustellen, dass der Projektfortschritt nicht ins Stocken gerät. Das gelegentliche Zeitmanagementproblem führte jedoch manchmal zu Stress, um Deadlines einzuhalten.
+
+Tip for the future (Wunsch)
+
+Für die Zukunft wäre es hilfreich, einen strikteren Zeitplan zu erstellen und diesen konsequent zu verfolgen. Dies könnte dazu beitragen, Stress zu reduzieren und sicherzustellen, dass wir genügend Zeit für alle Phasen des Projekts haben, einschließlich der Überprüfung und Verbesserung.
+
+
+
+User Evaluation - Quiz Levels:
+
+
+Goal
+Wie lange dauert es für einen neuen Benutzer, ein Quiz auf der Plattform zu durchspielen und seine Fortschritte zu sehen?
+
+Method
+Ich werde mich wie ein neuer Benutzer verhalten. Ich weiß, wofür diese App gedacht ist, 
+und möchte beim ersten Mal sofort ein Quiz in den verschiedenen Schwierigkeitsgraden (Anfänger, Fortgeschritten und Profi) durchspielen und meinen Fortschritt sehen.
+
+Results
+Registrierung und Anmeldung
+
+Der Registrierungsprozess war einfach und das Erstellen eines Kontos verlief reibungslos. Nachdem ich meine neuen Anmeldedaten eingegeben hatte,
+indem ich auf die Schaltfläche "Registrieren" wurde ich zur Anmeldeseite weitergeleitet. 
+
+Quiz-Interaktion
+
+Auf dem Startbildschirm befanden sich nun die Schaltflächen, "Quiz " und "Mein Fortschritt". Indem ich auf die Schaltfläche "Quiz starten" klickte, 
+wurde ich zur "Quiz-Seite" weitergeleitet. Dort konnte ich zwischen den verschiedenen Schwierigkeitsgraden (Anfänger, Fortgeschritten und Profi)  noch nicht wählen.
+ich  musste erstmal bei anfänger beginnen.
+
+Anfänger-Quiz: Der Quiz begann mit grundlegenden Fragen zu Kryptowährungen. Die Fragen waren klar formuliert und die Auswahlmöglichkeiten gut verständlich. Es dauerte etwa 20 Minuten, um das Anfänger-Quiz zu absolvieren.
+(mein bruder, ich kenne die fragen bereits)
+
+Fortgeschrittenen-Quiz: Das Quiz für Fortgeschrittene beinhaltete detailliertere Fragen und forderte ein tieferes Verständnis der Materie. Es dauerte etwa 40 Minuten, um dieses Quiz zu absolvieren.
+
+Profi-Quiz: Das Profi-Quiz war am anspruchsvollsten, mit komplexen Fragen zu fortgeschrittenen Konzepten der Kryptowährungen. Die Bearbeitung dauerte etwa 55 Minuten.
+
+Fortschrittsanzeige
+
+Nach dem Abschluss jedes Quizzes wurde ich zur Seite "Mein Fortschritt" weitergeleitet, wo ich meine Punkte und meinen Level einsehen konnte. Die Fortschrittsanzeige war klar 
+und motivierend gestaltet, was dazu beitrug, den Nutzer zu ermutigen, weiter zu lernen und höhere Levels zu erreichen.
+
+Implications
+Die Implikationen dieser Bewertung sind positiv. Sie zeigen, dass die App aus der Perspektive eines neuen Benutzers leicht verständlich und einfach zu bedienen ist. 
+Dies kann zu einer verbesserten Benutzererfahrung führen und dazu beitragen, dass Benutzer die App gerne nutzen und möglicherweise positive Bewertungen abgeben. 
+Darüber hinaus deutet die klare visuelle Gestaltung und die gute Anleitung darauf hin, dass die App gut durchdacht und sorgfältig entwickelt wurde,
+was das Vertrauen der Benutzer in die Zuverlässigkeit und Qualität der App stärken kann.
+
+dabei ist dem spieler (mein bruder) eine Verbesserungen eingefallen, nämlich :
+
+Zeitmanagement: Es wäre hilfreich, einen Timer während des Quizzes anzuzeigen, damit die Benutzer ihre Zeit besser verwalten können.
+Feedback-System: Nach jeder beantworteten Frage könnte sofort Feedback gegeben werden, um das Lernen effektiver zu gestalten.
+Erweiterte Statistiken: Eine detailliertere Anzeige der Fortschritte, wie z.B. welche Kategorien besonders gut oder schlecht abgeschnitten haben, könnte den Lernprozess weiter verbessern.
+Schlussfolgerung
+Insgesamt zeigt die Bewertung, dass die App benutzerfreundlich ist und eine effektive Lernplattform für verschiedene Niveaus des Wissens über Kryptowährungen bietet. 
+Mit einigen Verbesserungen kann die App noch wertvoller und ansprechender für die Benutzer werden.
+
+Fazit
+Die Crypto-Learning-Plattform bietet eine umfassende und benutzerfreundliche Lösung für das Lernen und Vertiefen von Wissen
+über Kryptowährungen. Durch die klare Struktur, die robuste Fehlerbehandlung und die hohen Sicherheitsstandards ist die 
+Anwendung sowohl für Anfänger als auch für fortgeschrittene Benutzer geeignet. Zukünftige Erweiterungen und Anpassungen 
+können problemlos integriert werden, um die Plattform kontinuierlich zu verbessern und den sich ändernden Bedürfnissen der Benutzer gerecht zu werden
+auch wenn wir unsere anfänglichen ziele nicht alle implementiert haben, sind wir unserer grundidee treu geblieben und die nutzer sind motiviert das crypto trading näher kennenzulernen.
+wir beide hatten sehr viel spass am projekt und wären sehr motiviert weiter daran zu arbeiten.
+
